@@ -1,0 +1,145 @@
+.visually-hidden,
+.visually-hidden-focusable:not(:focus):not(:focus-within) {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+
+#movies img{
+    width: 100%;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    vertical-align: middle;    
+  }
+
+.offline {
+    height: 10px;
+    width: 10px;
+    background: radial-gradient(circle, rgba(249,142,142,1) 0%, rgba(255,0,0,1) 50%, rgba(255,0,0,1) 60%, rgba(235,117,117,1) 100%);
+    border-radius: 50%;   
+}
+
+.online {
+    height: 10px;
+    width: 10px;
+    background: radial-gradient(circle, rgba(142,249,178,1) 0%, rgba(0,255,132,1) 50%, rgba(0,255,65,1) 60%, rgba(117,235,152,1) 100%);
+    border-radius: 50%;    
+}
+
+.logonavbar img{
+  width: 90px;
+  height: auto;
+}
+
+.logo{  
+  text-align: center;  
+}
+
+.logo img{  
+  padding: 1.8em;
+}
+  
+.buscador {
+  padding-bottom: 2.0em;
+}
+
+.resultados{
+  padding-bottom: 6.0em;
+}
+
+.tarjetas{
+  margin: 1.0em;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.tarjetas h4{
+  padding-top: 10px;
+  text-align: center;
+}
+
+.botonsubmit{
+  border-bottom-left-radius: calc(0.5rem - 1px);
+  border-bottom-right-radius: calc(0.5rem - 1px);
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.botonsubmit:after {
+  content: '  »';  
+  opacity: 0;  
+  top: 14px;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.botonsubmit:hover{
+  padding-right: 24px;
+  padding-left:8px;
+}
+
+.botonsubmit:hover:after {
+  opacity: 1;
+  right: 10px;
+}
+
+
+/* Ahora modificamos los detalles de las pelis o lo que sea*/
+
+.resultados-detalles{
+  padding-top: 6.0em;
+  padding-bottom: 6.0em;
+}
+
+.posterdet{
+  padding: 0.7em;
+  
+}
+
+.infoitems p{
+  color: #000;
+}
+
+.plot{
+  padding: 1em;
+}
+
+.plot p{
+  padding-top: 0.75em;
+  padding-left: 0.5em;
+}
+
+
+/* Retocando Footer */
+.footer{
+  border-top: 1px solid rgba(117,235,152,1);
+}
+
+.iconosfoot{
+  margin-bottom: 20px;
+}
+
+
+@media(min-width:960px){
+    #movies .col-md-3 .well{
+        height: 390px;
+    }
+
+    #movies .col-md-3 img{
+        height: 240px;
+    }
+}

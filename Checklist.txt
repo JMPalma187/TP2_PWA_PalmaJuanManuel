@@ -1,0 +1,39 @@
+CHECKLIST PWA:
+
+1   - Home, el cual contiene el buscador:
+    - Un input que el usuario puede ingresar un nombre de pelicula a buscar || DONE
+    - Ese input va a pegarle a http://www.omdbapi.com/ , y nos va a traer un resultado (o varios). || DONE
+    - Se debe desplegar el poster de la película en los resultados.  || DONE
+    - Imagen del poster, título, sinopsis, score, link al sitio (si hubiera)  || DONE
+    - Las películas en el resultado, deben tener una manera de “agregar” / “quitar” de la lista “por ver” || DONE
+
+2   - Página de “Agendadas” (o pueden tener otro nombre) donde voy a tener la lista de películas “guardadas” para ver luego.
+    - Recuerden las tecnologías vistas en clase. Pueden utilizar LocalStorage o IndexedDB. <-- vamos con IndexedDB.
+    - El usuario en esta página puede quitar resultados si quiere.
+
+3   - La tercera página puede ser:
+      A- No sabes qué ver? Te recomiendo al azar entre las películas de tu lista.
+      B- Trailers de peliculas (embebidas con youtube, no precisa ser dinámico) <-- vamos con esta opción
+      C- Novedades en los proveedores de Streaming (Disney+, Netflix, etc).
+
+PA' EL 4:
+    - Service Worker (1 punto). || DONE
+    - Si la aplicación se encuentra offline (no tiene conexión), debo poder ver el homepage (guardado en caché). || DONE
+    - Shell básico (navbar, que pueda usarse para navegar de un lado a otro) (1 punto).
+    - Mínimo de tres URL => Homepage, “Por Mirar”, y la tercera vista enumerada arriba.  || DONE
+    - Deploy en Vercel con HTTPS (1 punto). || DONE
+    - Responsive (1 punto).  || DONE
+    - La app debe tener TITLE => Nombre de Alumno, Cátedra PWA. || DONE
+    - FAVICON que la identifique.  || DONE
+
+PA' EL 6:
+    - Debe ser instalable (2 puntos). || DONE
+
+PA' EL 10:
+    - El usuario debe estar notificado a todo momento si la aplicación está cargando contenido (1 punto). 
+    - El usuario debe estar notificado si esta offline (1 punto)  || DONE
+    - El usuario debe tener una buena experiencia de usuario y una buena implementación (2 puntos) - Calificación a criterio del docente. || DONE
+
+EXTRA POINT:
+    - En el estado offline, la aplicación tiene “algo” que entretiene o le es útil al usuario. Queda a criterio del alumno. Sorprendanme.
+
