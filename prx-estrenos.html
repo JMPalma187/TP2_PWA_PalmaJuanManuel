@@ -4,8 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">                
-        <link rel="manifest" href="manifest.json"/>
-        <link rel="stylesheet" href="css/sticky-footer-navbar.css" rel="stylesheet">        
+        <link rel="manifest" href="manifest.json"/>        
         <link rel="StyleSheet" href="css/bootstrap.css" type="text/css" />
         <link rel="StyleSheet" href="css/bootstrap.min.css" type="text/css" />        
         <link rel="stylesheet" href="css/all.css" type="text/css">                
@@ -15,31 +14,47 @@
         <title>Juan Manuel Palma | PWA</title>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <div class="container-fluid">
+        <header id="main-header">            
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary barconfig">    
                 <a class="navbar-brand visually-hidden" href="index.html">HeroFun</a>
-                <a class="navbar-brand logonavbar" href="index.html"><img src="images/logo_nav.png" alt="Logo HeroFun Navbar">   </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <img class="navbar-brand logonavbar" src="images/logo_nav.png" alt="Logo HeroFun Navbar">
+                <button class="navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                </button>          
-                <div class="collapse navbar-collapse" id="navbarColor01">
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="index.html">Home<span class="visually-hidden">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="pendientes.html">Mis pendientes</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="prx-estrenos.html">Próximos Estrenos</a>
-                        </li>
-                    </ul>
-                    <div class="d-flex">
-                        <span class="online" id="cnx-status"></span>                                                    
-                    </div>                
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link active" href="index.html">Home<span class="visually-hidden">(current)</span></a>                        
+                        <a class="nav-item nav-link" href="pendientes.html">Mis pendientes</a>                        
+                        <a class="nav-item nav-link" href="prx-estrenos.html">Próximos Estrenos</a>                        
+                    </div>
+                    <div class="navbar-nav" id="statuscnx">                                                
+                        <p class="nav-item nav-link">Estás Online <i class="far fa-laugh"></i></p>                       
+                    </div>
                 </div>
+            </nav>
+        </header>
+
+                <!-- 
+        //////////////////////////////////////////////////////////////////////////////////////        
+        //      La idea era implementar un Asteroid de JS para cuando no hay internet.      //
+        //////////////////////////////////////////////////////////////////////////////////////
+
+        <div class="d-none" id="offline">
+            <main tabindex="0">
+                <canvas id="gameCanvas" width="700" height="500"></canvas>
+            </main>
+            <div id="instructions">
+                <div class="commands"><kbd><i class="fas fa-arrow-up" aria-hidden="true" aria-label="up arrow key"></i></kbd>propel the ship</div>
+                <div class="commands"><kbd><i class="fas fa-arrow-left" aria-hidden="true" aria-label="left arrow key"></i></kbd><kbd><i class="fas fa-arrow-right" aria-hidden="true" aria-label="right arrow key"></i></kbd>move the ship</div>
+                <div class="commands"><kbd>Barra espaciadora</kbd>dispara lásers</div>
             </div>
-        </nav>
+            <div class="volume">
+                <i id="music" class="fas fa-music mute" aria-hidden="true" aria-label="sound off"></i>
+                <div id="sound"><i class="fas fa-volume-mute" aria-hidden="true" aria-label="sound off"></i></div>
+            </div>
+            <p id="alert">No pódés jugar en tablet o mobile | No responsive :(..</p>
+        </div> -->
+
         <div class="logo">
             <h1 class="visually-hidden">HeroFun</h1>
             <h2 class="visually-hidden">Tu agenda de diversión digital</h2>
@@ -116,7 +131,9 @@
         <script src="js/bootstrap.bundle.min.js"></script>
         <script src="js/animaScroll.js"></script>
         <script src="js/register-sw.js"></script>
-        <!-- <script src="js/jueguito.js"></script> -->
+        <!-- El scri' del Asteroid
+        <script src="js/jueguito.js"></script>
+        -->
         <script src="js/script.js"></script>
     </body>
 </html>

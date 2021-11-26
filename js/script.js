@@ -2,33 +2,17 @@ const API_KEY = "2620bb10";
 const URL = "https://www.omdbapi.com/";
 
 window.addEventListener('offline', event =>{
-    document.getElementById('statuscnx').innerHTML = (` <div class="offline-indicator" id="cnx-status">
-                                                            <i class="blink-offline"></i>
-                                                        </div>                                                        
-                                                        <p class="nav-item nav-link offline-text"> Estás Offline </p>
-                                                        `);
+    document.getElementById('statuscnx').innerHTML =  (`<p class="nav-item nav-link">| Estás Offline <i class="fas fa-skull"></i></p>`);
 });
 
 window.addEventListener('online', event =>{
-    document.getElementById('statuscnx').innerHTML = (`<div class="online-indicator" id="cnx-status">
-                                                            <i class="blink-online"></i>
-                                                       </div>
-                                                       <p class="nav-item nav-link online-text"> Estás Online </p>
-                                                       `);
+    document.getElementById('statuscnx').innerHTML = (`<p class="nav-item nav-link">| Estás Online <i class="far fa-laugh"></i></p>`);
   });
   
   if(!navigator.onLine){
-    document.getElementById('statuscnx').innerHTML = (` <div class="offline-indicator" id="cnx-status">
-                                                           <i class="blink-offline"></i>
-                                                       </div>
-                                                       <p class="nav-item nav-link offline-text"> Estás Offline </p>
-                                                       `);
+    document.getElementById('statuscnx').innerHTML = (`<p class="nav-item nav-link">| Estás Offline <i class="fas fa-skull"></i></p>`);
   } else {
-    document.getElementById('statuscnx').innerHTML = (`<div class="online-indicator" id="cnx-status">
-                                                            <i class="blink-online"></i>
-                                                       </div>                                                       
-                                                       <p class="nav-item nav-link online-text"> Estás Online </p>
-                                                       `);
+    document.getElementById('statuscnx').innerHTML = (`<p class="nav-item nav-link">| Estás Online <i class="far fa-laugh"></i></p>`);
   };
 
 $(document).ready(() => {
@@ -227,3 +211,23 @@ function process(storage_name) {
 
 // meto update de todo
 process("my_storage");
+
+// Spinner de carga
+
+function onReady(callback) {
+    var intervalId = window.setInterval(function() {
+      if (document.getElementsByTagName('body')[0] !== undefined) {
+        window.clearInterval(intervalId);
+        callback.call(this);
+      }
+    }, 1000);
+  }
+  
+  function setVisible(selector, visible) {
+    document.querySelector(selector).style.display = visible ? 'block' : 'none';
+  }
+  
+  onReady(function() {
+    setVisible('.page', true);
+    setVisible('#loading', false);
+  });
