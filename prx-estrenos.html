@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">                
+        <link rel="manifest" href="manifest.json"/>
+        <link rel="stylesheet" href="css/sticky-footer-navbar.css" rel="stylesheet">        
+        <link rel="StyleSheet" href="css/bootstrap.css" type="text/css" />
+        <link rel="StyleSheet" href="css/bootstrap.min.css" type="text/css" />        
+        <link rel="stylesheet" href="css/all.css" type="text/css">                
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+        <link rel="shortcut icon" href="favicon.ico" />
+        <title>Juan Manuel Palma | PWA</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand visually-hidden" href="index.html">HeroFun</a>
+                <a class="navbar-brand logonavbar" href="index.html"><img src="images/logo_nav.png" alt="Logo HeroFun Navbar">   </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>          
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home<span class="visually-hidden">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pendientes.html">Mis pendientes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="prx-estrenos.html">Próximos Estrenos</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex">
+                        <span class="online" id="cnx-status"></span>                                                    
+                    </div>                
+                </div>
+            </div>
+        </nav>
+        <div class="logo">
+            <h1 class="visually-hidden">HeroFun</h1>
+            <h2 class="visually-hidden">Tu agenda de diversión digital</h2>
+            <img class="img-fluid" src="images/HEROFUN_LOGO.png" alt="Logotipo de Herofun">
+        </div>
+        <hr>
+        <section class="titulo-prxestrenos">
+            <div class="container">
+                <div id="main-container" class="jumbotron">
+                      <h3 class="text-center">Próximos Estrenos</h3>                      
+                </div>
+            </div>
+        </section>
+        <section class="listado-prxestrenos">
+            <div class="container">
+                <div class="row" id="movies" >
+                    <div class="col-12 card border-primary mb-3 tarjetas-prx" style="max-width: 90rem;">
+                        <div class="card-header">South Park: Post COVID Special</div>
+                        <div class="card-body non-floater">
+                            <iframe src="https://www.youtube.com/embed/EH1dG4dlRw4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                <div class="col-12 card border-primary mb-3 tarjetas-prx" style="max-width: 90rem;">
+                        <div class="card-header">Batman vs Teeneage Mutant Ninja Turtles</div>
+                        <div class="card-body non-floater">                            
+                            <iframe src="https://www.youtube.com/embed/wpZPPrnEd_k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="col-12 card border-primary mb-3 tarjetas-prx" style="max-width: 90rem;">
+                        <div class="card-header">Spider-Man: No Way Home</div>
+                        <div class="card-body non-floater">                          
+                            <iframe src="https://www.youtube.com/embed/-UhtvnTQhHQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="col-12 card border-primary mb-3 tarjetas-prx" style="max-width: 90rem;">
+                        <div class="card-header">Top Gun 2: Maverick</div>
+                        <div class="card-body non-floater">                          
+                            <iframe src="https://www.youtube.com/embed/qSqVVswa420" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="col-12 card border-primary mb-3 tarjetas-prx" style="max-width: 90rem;">
+                        <div class="card-header">The Book of Boba Fett</div>
+                        <div class="card-body non-floater">
+                            <iframe src="https://www.youtube.com/embed/QEsrx8GGALo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="col-12 card border-primary mb-3 tarjetas-prx" style="max-width: 90rem;">
+                        <div class="card-header">The Batman</div>
+                        <div class="card-body non-floater">
+                            <iframe src="https://www.youtube.com/embed/fhjXrhy1fuU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>                    
+            </div>
+        </section>
+        <footer class="footer mt-auto py-3"">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 disclaimer-tp">
+                        <span class="badge bg-info">Palma Juan Manuel - DWTN3A - PWA TP2 - 2021</span>
+                    </div>    
+                    <div class="col-lg-4 my-3 my-lg-0">
+                        <button class="btn btn-outline-info" onclick="window.open('https://www.instagram.com/j1jdesign/', '_blank'); return false;"><i class="fab fa-instagram"></i></button>     
+                        <button class="btn btn-outline-info" onclick="window.open('https://www.facebook.com/j1jdns', '_blank'); return false;"><i class="fab fa-facebook-f"></i></button> 
+                        <button class="btn btn-outline-info" onclick="window.open('https://www.linkedin.com/in/juanmpalma/', '_blank'); return false;"><i class="fab fa-linkedin-in"></i></button>                        
+                    </div>
+                    <div class="col-lg-4 footer-link-dv">
+                        <button class="btn btn-info" onclick="window.open('https://davinci.edu.ar/', '_blank'); return false;">Escuela Da Vinci</button>                                                
+                    </div>
+                </div>
+            </div>
+        </footer>        
+        <script src="js/jquery-3.5.1.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/animaScroll.js"></script>
+        <script src="js/register-sw.js"></script>
+        <!-- <script src="js/jueguito.js"></script> -->
+        <script src="js/script.js"></script>
+    </body>
+</html>

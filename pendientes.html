@@ -28,57 +28,25 @@
                         <a class="nav-item nav-link" href="pendientes.html">Mis pendientes</a>                        
                         <a class="nav-item nav-link" href="prx-estrenos.html">Próximos Estrenos</a>                        
                     </div>
-                    <div class="navbar-nav" id="statuscnx">                        
+                    <div class="navbar-nav" id="statuscnx">
+                        <p class="nav-item nav-link online-text">Estás Online </p>                                                                          
                         <div class="online-indicator">
-                            <i class="blink-online"></i>
+                            <span class="blink-online"></span>
                         </div>
-                        <p class="nav-item nav-link online-text">Estás Online </p>                                                                              
                     </div>
                 </div>
             </nav>
-        </header>      
+        </header>
 
         <div class="logo">
             <h1 class="visually-hidden">HeroFun</h1>
             <h2 class="visually-hidden">Tu agenda de diversión digital</h2>
             <img class="img-fluid" src="images/HEROFUN_LOGO.png" alt="Logotipo de Herofun">
         </div>
-        <hr>
-        <!-- 
-        //////////////////////////////////////////////////////////////////////////////////////        
-        //      La idea era implementar un Asteroid de JS para cuando no hay internet.      //
-        //////////////////////////////////////////////////////////////////////////////////////
-
-        <div class="d-none" id="offline">
-            <main tabindex="0">
-                <canvas id="gameCanvas" width="700" height="500"></canvas>
-            </main>
-            <div id="instructions">
-                <div class="commands"><kbd><i class="fas fa-arrow-up" aria-hidden="true" aria-label="up arrow key"></i></kbd>propel the ship</div>
-                <div class="commands"><kbd><i class="fas fa-arrow-left" aria-hidden="true" aria-label="left arrow key"></i></kbd><kbd><i class="fas fa-arrow-right" aria-hidden="true" aria-label="right arrow key"></i></kbd>move the ship</div>
-                <div class="commands"><kbd>Barra espaciadora</kbd>dispara lásers</div>
-            </div>
-            <div class="volume">
-                <i id="music" class="fas fa-music mute" aria-hidden="true" aria-label="sound off"></i>
-                <div id="sound"><i class="fas fa-volume-mute" aria-hidden="true" aria-label="sound off"></i></div>
-            </div>
-            <p id="alert">No pódés jugar en tablet o mobile | No responsive :(..</p>
-        </div> -->
-        
-        <section id="main-container" class="buscador">
+        <hr>        
+        <section class="pendientes">
             <div class="container">
-                <div class="jumbotron">
-                      <h3 class="text-center">Buscador de pelis y series</h3>
-                      <form id="searchForm" class="d-flex">
-                        <input class="form-control me-sm-2" id="buscarPeli" type="text" placeholder="Buscar películas o series">
-                        <button class="btn btn-primary my-2 my-sm-0" type="submit">Buscar</button>
-                      </form>
-                </div>
-            </div>
-        </section>
-        <section class="resultados">
-            <div class="container">
-                <div id="movies" class="row">                        
+                <div id="pendmovies" class="row">                        
                 </div>
             </div>
         </section>
@@ -86,7 +54,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 disclaimer-tp">
-                        <p><strong>Palma Juan Manuel - DWTN3A - PWA TP2 - 2021</strong></p>
+                        <span class="badge bg-info">Palma Juan Manuel - DWTN3A - PWA TP2 - 2021</span>
                     </div>    
                     <div class="col-lg-4 my-3 my-lg-0">
                         <button class="btn btn-outline-info" onclick="window.open('https://www.instagram.com/j1jdesign/', '_blank'); return false;"><i class="fab fa-instagram"></i></button>     
@@ -99,14 +67,16 @@
                 </div>
             </div>
         </footer>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/es-mx.min.js" integrity="sha512-Qy4cmZ6v7vnVEc0cn/BIj9q15eB98do4hMvu8xtc/H+v+YYpdpDrB35flHS3NPLbZUpe1npSYY/u+Gi3UB61vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="js/jquery-3.5.1.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
         <script src="js/animaScroll.js"></script>
-        <script src="js/register-sw.js"></script>   
+        <script src="js/register-sw.js"></script>
+   <!-- <script src="js/jueguito.js"></script> -->
         <script src="js/script.js"></script>
-        <!-- El scri' del Asteroid
-        <script src="js/jueguito.js"></script>
-        -->
+        <script>
+            process();
+        </script>
     </body>
 </html>

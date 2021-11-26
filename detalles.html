@@ -25,21 +25,26 @@
                 <div class="collapse navbar-collapse" id="navbarColor01">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" href="index.html">Home<span class="visually-hidden">(current)</span></a>
+                            <a class="nav-link active hover-underline-animation" href="index.html">Home<span class="visually-hidden">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Mis pendientes</a>
+                            <a class="nav-link hover-underline-animation" href="pendientes.html">Mis pendientes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Próximos Estrenos</a>
-                        </li>
-                        <li class="nav-item">
-                            <span class="nav-link online" id="cnx-status"></span>                            
+                            <a class="nav-link hover-underline-animation" href="prx-estrenos.html">Próximos Estrenos</a>
                         </li>
                     </ul>
+                    <div class="d-flex">
+                        <span class="online" id="cnx-status"></span>                                                    
+                    </div>                
                 </div>
             </div>
         </nav>
+        <div class="container spinner d-none" id="spinner">
+            <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>       
         <section id="titulo-detalles">
             <div class="titulo-detalles">        
             </div>
